@@ -1,0 +1,307 @@
+/* Global Variables */
+:root {
+  --bg: #faf7f2;
+  --text: #333;
+  --muted: #6b6b6b;
+  --brand: #216869;
+  --brand-2: #49a078;
+  --card: #ffffff;
+  --border: #f3e6d6;
+}
+
+/* Reset & Body */
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: var(--border);
+  font-weight: bold;
+  color: var(--brand);
+ 
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--brand);
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover {
+  color: darkred;
+}
+
+
+/* Hero */
+.hero {
+  background: url('images/bg.jpg') center/cover no-repeat;
+  height: 500px;
+  position: relative;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.tagline-box {
+  display: inline-block;
+  background-color: var(--brand-2);
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: var(--brand);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 999px;
+}
+
+.cta:hover {
+  background-color: var(--brand-2);
+}
+
+/* About Section */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ثابت عمودين */
+  gap: 24px; /* تقليل المسافة بين البطاقات */
+  max-width: 1100px; /* تقريبهم للوسط */
+  margin: 40px auto; /* رفعهم للأعلى + توسيط */
+  padding: 0 40px; /* تخفيف المسافة الجانبية */
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 26px; /* بطاقات أصغر */
+  min-height: 200px; /* تقليل ارتفاعها */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-card h3 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+}
+
+.badges span {
+  background-color: var(--bg);
+  color: var(--muted);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid var(--border);
+  margin-right: 5px;
+}
+
+
+/* Menu Section */
+.menu-section {
+  padding: 80px 12vw;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.menu-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 28px 32px;
+  border-radius: 14px;
+}
+
+.menu-card h3 {
+  color: #000; /* أسود */
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 6px;
+  font-weight: 600;
+  border-bottom: 1px dashed; /* شيل الخط */
+}
+
+.price {
+  color: var(--brand);
+}
+
+.desc {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin: 4px 0 10px;
+}
+
+/* Hours & Contact */
+.hours-contact-section {
+  background: var(--bg);
+  padding: 80px 40px;
+}
+
+.hours-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.info-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 40px 35px;
+  text-align: center;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.08);
+}
+
+.info-card h2 {
+  color: var(--brand);
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+}
+
+.hours-item:last-child {
+  border-bottom: none;
+}
+
+.days, .time {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.contact-method {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Find Us Section */
+.find-us-section {
+  background: var(--bg);
+  padding: 70px 40px;
+}
+
+.find-us-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.find-us-card {
+  text-align: left;
+}
+
+.map-box {
+  display: flex;
+  justify-content: center;
+}
+
+.map-box .map-img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .find-us-grid {
+    grid-template-columns: 1fr;
+  }
+  .find-us-card {
+    text-align: center;
+  }
+}
+
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  
+  color: --muted;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .hours-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hours-item {
+    flex-direction: column;
+  }
+}
