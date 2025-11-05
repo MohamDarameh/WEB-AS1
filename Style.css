@@ -24,10 +24,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: var(--border);
+  background: var(--bg);
   font-weight: bold;
   color: var(--brand);
- 
   top: 0;
   z-index: 100;
 }
@@ -48,7 +47,6 @@ body {
 .nav-links a:hover {
   color: darkred;
 }
-
 
 /* Hero */
 .hero {
@@ -75,7 +73,7 @@ body {
   font-weight: bold;
   font-size: 0.9rem;
   margin-bottom: 15px;
-  text-transform: uppercase;
+  
 }
 
 .cta {
@@ -96,19 +94,19 @@ body {
 /* About Section */
 .about-section {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* ثابت عمودين */
-  gap: 24px; /* تقليل المسافة بين البطاقات */
-  max-width: 1100px; /* تقريبهم للوسط */
-  margin: 40px auto; /* رفعهم للأعلى + توسيط */
-  padding: 0 40px; /* تخفيف المسافة الجانبية */
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 40px;
 }
 
 .about-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 22px 26px; /* بطاقات أصغر */
-  min-height: 200px; /* تقليل ارتفاعها */
+  padding: 22px 26px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -135,7 +133,6 @@ body {
   margin-right: 5px;
 }
 
-
 /* Menu Section */
 .menu-section {
   padding: 80px 12vw;
@@ -161,7 +158,7 @@ body {
 }
 
 .menu-card h3 {
-  color: #000; /* أسود */
+  color: #000;
   font-size: 1.15rem;
   margin-bottom: 18px;
 }
@@ -171,7 +168,7 @@ body {
   justify-content: space-between;
   padding: 10px 0 6px;
   font-weight: 600;
-  border-bottom: 1px dashed; /* شيل الخط */
+  border-bottom: 1px dashed;
 }
 
 .price {
@@ -180,7 +177,7 @@ body {
 
 .desc {
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 13حء;
   margin: 4px 0 10px;
 }
 
@@ -192,7 +189,7 @@ body {
 
 .hours-contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   max-width: 900px;
   margin: 0 auto;
@@ -207,7 +204,7 @@ body {
 }
 
 .info-card h2 {
-  color: var(--brand);
+  color: var(--text);
   font-size: 1.8rem;
   margin-bottom: 30px;
 }
@@ -270,38 +267,74 @@ body {
   border: 1px solid var(--border);
 }
 
-/* Responsive */
-@media (max-width: 850px) {
-  .find-us-grid {
-    grid-template-columns: 1fr;
-  }
-  .find-us-card {
-    text-align: center;
-  }
-}
 
-
-/* Footer */
 .site-footer {
   text-align: center;
   padding: 20px;
-  
-  color: --muted;
+  color: var(--muted);
   font-weight: 500;
+
+}
+.name-id {
+  color: var(--brand);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
+
+
+
+@media (max-width: 850px) {
+  .site-header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
   }
-  .hours-contact-grid {
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .about-section,
+  .menu-grid,
+  .hours-contact-grid,
+  .find-us-grid {
     grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .map-box .map-img {
+    max-width: 100%;
   }
 }
 
-@media (max-width: 480px) {
+
+@media (max-width: 550px) {
+  .hero {
+    height: 350px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .tagline-box {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+  }
+
+  .cta {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
   .hours-item {
     flex-direction: column;
+    text-align: center;
+    gap: 4px;
+  }
+
+  .info-card {
+    padding: 28px 20px;
   }
 }
